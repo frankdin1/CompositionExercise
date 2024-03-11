@@ -1,9 +1,6 @@
 public class SmartAppliance {
     private boolean hasWorkToDo;
 
-    public boolean isHasWorkToDo() {
-        return hasWorkToDo;
-    }
 
     public void setHasWorkToDo(boolean hasWorkToDo) {
         this.hasWorkToDo = hasWorkToDo;
@@ -20,14 +17,9 @@ class Refrigerator extends SmartAppliance{
     }
 
 
-    public boolean getHasWorkToDo() {
-        return hasWorkToDo;
-    }
-
     public void orderFood(){
-        if (getHasWorkToDo()) {
+        if (hasWorkToDo)
             System.out.println("Your food has been ordered.");
-        }
     }
 }
 
@@ -40,12 +32,9 @@ class DishWasher extends SmartAppliance{
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public boolean getHasWorkToDo() {
-        return hasWorkToDo;
-    }
 
     public void doDishes(){
-        if (getHasWorkToDo())
+        if (hasWorkToDo)
             System.out.println("The dishes have been done.");
     }
 }
@@ -59,11 +48,8 @@ class CoffeeMaker extends SmartAppliance{
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public boolean getHasWorkToDo() {
-        return hasWorkToDo;
-    }
-
     public void brewCoffee(){
-        System.out.println("Your coffee is ready.");
+        if (hasWorkToDo)
+            System.out.println("Your coffee is ready.");
     }
 }
